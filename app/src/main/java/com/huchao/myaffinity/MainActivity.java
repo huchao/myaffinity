@@ -44,11 +44,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnSet.setOnClickListener(this);
         mBtnGetNcnn.setOnClickListener(this);
         mBtnSetNcnn.setOnClickListener(this);
+
+        mBtnEndLoop.setEnabled(false);
     }
 
     @Override
     public void onClick(View v) {
         if (v.equals(mBtnStartLoop)) {
+            mBtnEndLoop.setEnabled(true);
+
             Toast.makeText(this, "StartLoop", Toast.LENGTH_SHORT).show();
             int cores = Runtime.getRuntime().availableProcessors();
             for (int index = 0; index < cores; index++) {
