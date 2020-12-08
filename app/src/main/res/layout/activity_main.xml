@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPU Mask：" />
+        <EditText
+            android:id="@+id/et_cpu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11111111" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_start_loop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Loop"/>
+
+    <Button
+        android:id="@+id/btn_end_loop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="End Loop"/>
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GetAffinity" />
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SetAffinity" />
+
+    <Button
+        android:id="@+id/btn_get_ncnn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GetAffinityNCNN" />
+
+    <Button
+        android:id="@+id/btn_set_ncnn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SetAffinityNCNN" />
+
+</LinearLayout>
