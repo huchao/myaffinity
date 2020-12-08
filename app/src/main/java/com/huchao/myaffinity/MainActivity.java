@@ -7,6 +7,7 @@ import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.equals(mBtnStartLoop)) {
+            Toast.makeText(this, "StartLoop", Toast.LENGTH_SHORT).show();
             int cores = Runtime.getRuntime().availableProcessors();
             for (int index = 0; index < cores; index++) {
                 new Thread(new Runnable() {
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         } else if (v.equals(mBtnEndLoop)) {
+            Toast.makeText(this, "StopLoop", Toast.LENGTH_SHORT).show();
             mIsEnd = true;
 
         } else if (v.equals(mBtnGet)) {
